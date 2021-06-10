@@ -6,6 +6,7 @@
 ## Description
 ​
 The project is an application that has a database and a functional backend.
+This is also the homework submission for UC San Diego's Coding Bootcamp.
 ​
 ## Table of Contents
 
@@ -14,31 +15,29 @@ The project is an application that has a database and a functional backend.
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
+* [Links](#links)
 * [Questions](#questions)
 
 ## Installation
 ​
-Run npm install to install the necessary packages.
+Run `npm install` to install the necessary packages.
 ​
 ## Usage
 ​
-n order to use this application, first install MySQL. Then, 
+In order to use this application, first install MySQL. 
+Then, enter the MySQL shell and run: `source db/schema.sql` and exit the shell afterwards.
+To populate the schema with the given seeds run: `npm run seed`.
+Finally, to start the server, run: `npm start`
 ​
 ## License
 ​
 This project is licensed under the MIT license.
-  
-## Contributing
 ​
-undefined
-
-## Tests
+## Links
 ​
-undefined
+[Here](https://drive.google.com/drive/folders/1HVYUev2ILsLfHXOX4jnmS71iX42NiVuR?usp=sharing) is a video walkthrough of the application
 ​
 ## Questions
 ​
-If you have any questions about the repo, open an issue or contact [Damaximum](https://github.com/Damaximum) or .
+If you have any questions about the repo, open an issue or contact [Damaximum](https://github.com/Damaximum).
     
