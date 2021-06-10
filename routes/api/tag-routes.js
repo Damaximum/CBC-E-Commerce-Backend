@@ -40,24 +40,25 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new tag
+  const tagData = await Tag.create(req.body);
+
+  return res.json(tagData);
 });
 
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
-  const bookData = await Book.update(
+  const tagData = await Tag.update(
     {
-      title: req.body.title,
-      author: req.body.author,
-      isbn: req.body.isbn,
-      pages: req.body.pages,
-      edition: req.body.edition,
-      is_paperback: req.body.is_paperback,
+     tag_name: req.body.tag_name
     },
     {
       where: {
-        book_id: req.params.book_id,
+        id: req.params.id,
       },
     }
+  );
+
+  return res.json(tagData);
 });
 
 router.delete('/:id', (req, res) => {

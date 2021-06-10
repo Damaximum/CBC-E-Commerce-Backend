@@ -40,10 +40,25 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // create a new category
+  const categoryData = await Category.create(req.body);
+
+  return res.json(categoryData);
 });
 
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
+  const categoryData = await Tag.update(
+    {
+      category_name: req.body.category_name
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  );
+
+  return res.json(categoryData);
 });
 
 router.delete('/:id', (req, res) => {
